@@ -15,6 +15,20 @@ There are four major components:
 First, clone this repository in a folder that is large enough to compile Linux kernel:
 ```
 git clone https://github.com/system-xmu/EXO.git
-
+git submodule init
+git submodule update
+```
+install linux kernel dependencies
+```
+sudo apt-get install ninja-build acpica-tools buildessential zlib1g-dev pkg-config libglib2.0-dev binutils-dev libboost-all-dev autoconf libtool libssldev libpixman-1-dev libpython2-dev python3-pip python-capstone virtualenv libpixman-1-dev libbpf-dev libcap-ng-dev libseccomp-dev
+```
+Compile and install Linux kernel:
+```
+cd linux
+sudo make bindeb-pkg -j20
+cd ..
+sudo dpkg -i *.deb
+vim /etc/default/grub // Choose the kernel installed just now
+sudo update-grub
 ```
 
