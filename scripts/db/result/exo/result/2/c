@@ -1,0 +1,6 @@
+2024-04-01 00:52:53 0 sec: 0 operations;
+2024-04-01 00:53:03 10 sec: 348016 operations; [READ: Count=348016 Max=1247.23 Min=1.21 Avg=56.40 90=101.82 99=128.06 99.9=152.96 99.99=940.03]
+2024-04-01 00:53:07 14 sec: 500000 operations; [READ: Count=500000 Max=1469.44 Min=1.21 Avg=57.09 90=102.53 99=128.90 99.9=155.26 99.99=952.83]
+Run runtime(sec): 14.6006
+Run operations(ops): 500000
+Run throughput(ops/sec): 34245.2

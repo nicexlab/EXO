@@ -1,0 +1,15 @@
+[global]
+bs=4k
+iodepth=128
+direct=1
+ioengine=libaio
+group_reporting
+numjobs=2
+name=raw-randread
+rw=randread
+
+
+[job1]
+filename=/home/joer/p1/5
+runtime=60
+time_based=1

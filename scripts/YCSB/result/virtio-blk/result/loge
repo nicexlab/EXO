@@ -1,0 +1,47 @@
+/usr/bin/java  -classpath /home/joer/p1/YCSB/conf:/home/joer/p1/YCSB/core/target/core-0.18.0-SNAPSHOT.jar:/home/joer/p1/YCSB/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/HdrHistogram-2.1.4.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/htrace-core4-4.1.0-incubating.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/jcip-annotations-1.0.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/rocksdbjni-6.2.2.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/slf4j-api-1.7.25.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/slf4j-simple-1.7.25.jar site.ycsb.Client -t -db site.ycsb.db.rocksdb.RocksDBClient -threads 4 -s -P workloads/workloade -p rocksdb.dir=/home/joer/p1/rocksdb/ycsb-rocksdb-data -p key_size=16 -p value_size=100
+Command line: -t -db site.ycsb.db.rocksdb.RocksDBClient -threads 4 -s -P workloads/workloade -p rocksdb.dir=/home/joer/p1/rocksdb/ycsb-rocksdb-data -p key_size=16 -p value_size=100
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+[Thread-3] INFO site.ycsb.db.rocksdb.RocksDBClient - RocksDB data dir: /home/joer/p1/rocksdb/ycsb-rocksdb-data
+2024-03-29 01:12:39:348 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-03-29 01:12:49:340 10 sec: 137442 operations; 13733.21 current ops/sec; est completion in 1 minute [INSERT: Count=6751, Max=5247, Min=4, Avg=20.17, 90=22, 99=36, 99.9=1843, 99.99=3113] [SCAN: Count=130818, Max=17583, Min=4, Avg=292.44, 90=503, 99=1129, 99.9=4359, 99.99=14103] 
+2024-03-29 01:12:59:344 20 sec: 307319 operations; 16994.5 current ops/sec; est completion in 46 seconds [INSERT: Count=8523, Max=1680, Min=4, Avg=16.17, 90=19, 99=27, 99.9=534, 99.99=1645] [SCAN: Count=161424, Max=8447, Min=4, Avg=245.51, 90=431, 99=645, 99.9=1982, 99.99=3363] 
+2024-03-29 01:13:09:339 30 sec: 476200 operations; 16889.79 current ops/sec; est completion in 34 seconds [INSERT: Count=8445, Max=1559, Min=4, Avg=15.95, 90=19, 99=27, 99.9=547, 99.99=1524] [SCAN: Count=160369, Max=9567, Min=4, Avg=246.65, 90=432, 99=646, 99.9=2018, 99.99=3507] 
+2024-03-29 01:13:19:345 40 sec: 643341 operations; 16712.43 current ops/sec; est completion in 23 seconds [INSERT: Count=8324, Max=1620, Min=4, Avg=15.81, 90=20, 99=28, 99.9=207, 99.99=1510] [SCAN: Count=158805, Max=15167, Min=4, Avg=249.82, 90=436, 99=647, 99.9=2037, 99.99=5599] 
+2024-03-29 01:13:29:348 50 sec: 810647 operations; 16732.27 current ops/sec; est completion in 12 seconds [INSERT: Count=8303, Max=447, Min=4, Avg=15.24, 90=20, 99=27, 99.9=34, 99.99=142] [SCAN: Count=158965, Max=4931, Min=4, Avg=249.19, 90=438, 99=646, 99.9=1972, 99.99=2923] 
+2024-03-29 01:13:39:340 60 sec: 976370 operations; 16570.64 current ops/sec; est completion in 2 second [INSERT: Count=8251, Max=4247, Min=4, Avg=16.61, 90=20, 99=28, 99.9=117, 99.99=1592] [SCAN: Count=157526, Max=11663, Min=4, Avg=251.84, 90=439, 99=657, 99.9=2049, 99.99=3943] 
+2024-03-29 01:13:40:855 61 sec: 1000000 operations; 15535.83 current ops/sec; [CLEANUP: Count=4, Max=22335, Min=3, Avg=5591.5, 90=22335, 99=22335, 99.9=22335, 99.99=22335] [INSERT: Count=1136, Max=1589, Min=4, Avg=18.66, 90=21, 99=28, 99.9=1588, 99.99=1589] [SCAN: Count=22360, Max=2337, Min=5, Avg=255.02, 90=442, 99=673, 99.9=2016, 99.99=2255] 
+[OVERALL], RunTime(ms), 61525
+[OVERALL], Throughput(ops/sec), 16253.555465258025
+[TOTAL_GCS_G1_Young_Generation], Count, 1198
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 1610
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 2.6168224299065423
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1198
+[TOTAL_GC_TIME], Time(ms), 1610
+[TOTAL_GC_TIME_%], Time(%), 2.6168224299065423
+[CLEANUP], Operations, 4
+[CLEANUP], AverageLatency(us), 5591.5
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 22335
+[CLEANUP], 95thPercentileLatency(us), 22335
+[CLEANUP], 99thPercentileLatency(us), 22335
+[INSERT], Operations, 49733
+[INSERT], AverageLatency(us), 16.589447650453423
+[INSERT], MinLatency(us), 4
+[INSERT], MaxLatency(us), 5247
+[INSERT], 95thPercentileLatency(us), 22
+[INSERT], 99thPercentileLatency(us), 28
+[INSERT], Return=OK, 49733
+[SCAN], Operations, 950267
+[SCAN], AverageLatency(us), 254.77059815820186
+[SCAN], MinLatency(us), 4
+[SCAN], MaxLatency(us), 17583
+[SCAN], 95thPercentileLatency(us), 486
+[SCAN], 99thPercentileLatency(us), 770
+[SCAN], Return=OK, 950267

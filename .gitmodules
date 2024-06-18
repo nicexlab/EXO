@@ -1,0 +1,14 @@
+[submodule "linux"]
+	path = linux
+	url = https://github.com/qq502233945/linux-vhost-blk.git
+	branch = vhosk-blk-ib
+[submodule "qemu"]
+	path = qemu
+	url = https://github.com/qq502233945/qemu-vhost-blk.git
+	branch = IB
+[submodule "ebpf-app"]
+	path = ebpf-app
+	url = https://github.com/qq502233945/ebpf-app.git
+[submodule "spdk"]
+	path = spdk
+	url = https://github.com/spdk/spdk.git

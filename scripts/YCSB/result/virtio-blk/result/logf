@@ -1,0 +1,48 @@
+/usr/bin/java  -classpath /home/joer/p1/YCSB/conf:/home/joer/p1/YCSB/core/target/core-0.18.0-SNAPSHOT.jar:/home/joer/p1/YCSB/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/HdrHistogram-2.1.4.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/htrace-core4-4.1.0-incubating.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/jcip-annotations-1.0.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/rocksdbjni-6.2.2.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/slf4j-api-1.7.25.jar:/home/joer/p1/YCSB/rocksdb/target/dependency/slf4j-simple-1.7.25.jar site.ycsb.Client -t -db site.ycsb.db.rocksdb.RocksDBClient -threads 4 -s -P workloads/workloadf -p rocksdb.dir=/home/joer/p1/rocksdb/ycsb-rocksdb-data -p key_size=16 -p value_size=100
+Command line: -t -db site.ycsb.db.rocksdb.RocksDBClient -threads 4 -s -P workloads/workloadf -p rocksdb.dir=/home/joer/p1/rocksdb/ycsb-rocksdb-data -p key_size=16 -p value_size=100
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+[Thread-3] INFO site.ycsb.db.rocksdb.RocksDBClient - RocksDB data dir: /home/joer/p1/rocksdb/ycsb-rocksdb-data
+2024-03-29 01:13:41:052 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-03-29 01:13:51:061 10 sec: 926773 operations; 92483.09 current ops/sec; est completion in 1 second [READ: Count=927573, Max=8027, Min=0, Avg=35.49, 90=77, 99=172, 99.9=830, 99.99=3127] [READ-MODIFY-WRITE: Count=463598, Max=8807, Min=4, Avg=46.24, 90=90, 99=197, 99.9=970, 99.99=3239] [UPDATE: Count=463643, Max=5055, Min=3, Avg=9.89, 90=13, 99=20, 99.9=127, 99.99=2245] 
+2024-03-29 01:13:52:172 11 sec: 1000000 operations; 65674.44 current ops/sec; [READ: Count=72427, Max=7563, Min=0, Avg=48.9, 90=108, 99=316, 99.9=1729, 99.99=7055] [READ-MODIFY-WRITE: Count=36124, Max=7415, Min=4, Avg=59.39, 90=123, 99=344, 99.9=1682, 99.99=6811] [CLEANUP: Count=4, Max=46655, Min=3, Avg=11667.75, 90=46655, 99=46655, 99.9=46655, 99.99=46655] [UPDATE: Count=36079, Max=2867, Min=3, Avg=10.23, 90=15, 99=24, 99.9=150, 99.99=1564] 
+[OVERALL], RunTime(ms), 11136
+[OVERALL], Throughput(ops/sec), 89798.85057471265
+[TOTAL_GCS_G1_Young_Generation], Count, 218
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 136
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 1.221264367816092
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 218
+[TOTAL_GC_TIME], Time(ms), 136
+[TOTAL_GC_TIME_%], Time(%), 1.221264367816092
+[READ], Operations, 1000000
+[READ], AverageLatency(us), 36.463692
+[READ], MinLatency(us), 0
+[READ], MaxLatency(us), 8027
+[READ], 95thPercentileLatency(us), 94
+[READ], 99thPercentileLatency(us), 185
+[READ], Return=OK, 1000000
+[READ-MODIFY-WRITE], Operations, 499722
+[READ-MODIFY-WRITE], AverageLatency(us), 47.187764397004734
+[READ-MODIFY-WRITE], MinLatency(us), 4
+[READ-MODIFY-WRITE], MaxLatency(us), 8807
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 109
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 210
+[CLEANUP], Operations, 4
+[CLEANUP], AverageLatency(us), 11667.75
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 46655
+[CLEANUP], 95thPercentileLatency(us), 46655
+[CLEANUP], 99thPercentileLatency(us), 46655
+[UPDATE], Operations, 499722
+[UPDATE], AverageLatency(us), 9.918192515038362
+[UPDATE], MinLatency(us), 3
+[UPDATE], MaxLatency(us), 5055
+[UPDATE], 95thPercentileLatency(us), 15
+[UPDATE], 99thPercentileLatency(us), 20
+[UPDATE], Return=OK, 499722
