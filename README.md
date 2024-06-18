@@ -2,7 +2,7 @@
 
 This repository contains source code and instructions to reproduce key results in the EXO paper (to appear in SC '24). A draft of the paper is added to this repository.
 
-EXO requires a low latency NVMe SSD on which the overhead of the Linux storage stack is significant. We use Intel Optane SSD P5800X in all the experiments. We provide SSH access to a host equipped with P5800X for artifact reviewers. Reviewers can find the credential on HotCRP. We assume that the operating system is Ubuntu 20.04, and there are 20 physical CPU cores on the machine. Other configurations may require changing the scripts accordingly.
+EXO requires a low latency NVMe SSD on which the overhead of the Linux storage stack is significant. We use Intel Optane SSD P5800X in all the experiments. We provide SSH access to a host equipped with P5800X for artifact reviewers. Reviewers can find the credential on HotCRP. We assume that the operating system is Ubuntu 20.04, qemu is v7.1.50 and there are 20 physical CPU cores on the machine. Other configurations may require changing the scripts accordingly.
 
 There are four major components:
 
@@ -31,4 +31,28 @@ sudo dpkg -i *.deb
 vim /etc/default/grub // Choose the kernel installed just now
 sudo update-grub
 ```
-
+Compile and install Qemu:
+```
+cd qemu
+ ../configure –enable-kvm –enable-vhost-blk –enable-bpf
+–extra-ldflags=”-lrt” –target-list=”x86 64-softmmu”
+mkdir build
+cd build
+sudo make install
+```
+Compile and install eBPF:
+```
+cd ebpf-app/libbpf/src
+make && make install
+cd ebpf-app/liburing
+./configure
+make && make install
+cd ebpf-app/kernel
+make
+```
+Compile and install SPDK:
+```
+cd spdk
+git submodule update --init
+//Then install SPDK follow the README.md
+```
