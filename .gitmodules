@@ -8,3 +8,6 @@
 [submodule "spdk"]
 	path = spdk
 	url = https://github.com/spdk/spdk.git
+[submodule "linux"]
+	path = linux
+	url = https://github.com/qq502233945/EXO-linux.git
