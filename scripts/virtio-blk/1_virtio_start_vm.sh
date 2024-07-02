@@ -2,21 +2,21 @@
 VM_COUNT=1
 qemu_pids=$(pgrep qemu)
 Root='console=ttyS0 root=/dev/sda5'
-# 杀掉所有QEMU进程  
+# kill all qemu process
 echo "Killing all running QEMU processes..."  
 sudo pkill -f qemu-system-x86_64  
-sleep 5  # 等待一段时间确保进程已经被杀死  
+sleep 5   
 space=" " 
-# 检查是否还有QEMU进程在运行  
+
 qemu_processes=$(pgrep -f qemu-system-x86_64)  
 if [ -n "$qemu_processes" ]; then  
     echo "Warning: Some QEMU processes may still be running."  
     exit 1  
 fi  
 
-# 虚拟机的基础启动命令  
-BASE_CMD="sudo /home/joer/vhost-blk-xrp/qemu-vhost-blk/build/qemu-system-x86_64"  
-KERNEL="  -kernel /boot/vmlinuz-6.1.0-guest+ -initrd /boot/initrd.img-6.1.0-guest+"
+# start the VM 
+BASE_CMD="sudo /home/joer/vhost-blk-xrp/EXO/qemu/build/qemu-system-x86_64"  
+KERNEL="  -kernel /boot/vmlinuz-6.1.0-rc8-origin+ -initrd /boot/initrd.img-6.1.0-rc8-origin+"
 
 
 for i in $(seq 1 $VM_COUNT); do  

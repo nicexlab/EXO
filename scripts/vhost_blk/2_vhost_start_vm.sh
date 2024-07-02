@@ -15,7 +15,7 @@ if [ -n "$qemu_processes" ]; then
 fi  
 
 # 虚拟机的基础启动命令  
-BASE_CMD="sudo /home/joer/vhost-blk-xrp/qemu-vhost-blk/build/qemu-system-x86_64"  
+BASE_CMD="sudo /home/joer/vhost-blk-xrp/EXO/qemu/build/qemu-system-x86_64"  
 KERNEL="  -kernel /boot/vmlinuz-5.15.0-67-generic -initrd /boot/initrd.img-5.15.0-67-generic"
 
 

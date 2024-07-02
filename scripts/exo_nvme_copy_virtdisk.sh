@@ -1,7 +1,7 @@
 #!/bin/bash  
   
 # 定义源文件和目标目录  
-SOURCE_FILE="/home/joer/optaneB/virtual-disk/disk0.raw"  # 替换为disk0.raw文件的实际路径  
+SOURCE_FILE="/home/joer/vms/virtual-disk/disk0.raw"  # 替换为disk0.raw文件的实际路径  
 TARGET_DIRS=("/home/joer/optaneA/virtual-disk")  # 替换为目标文件夹的实际路径数组  
   
 # 检查源文件是否存在  

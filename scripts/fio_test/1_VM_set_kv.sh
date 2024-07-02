@@ -7,7 +7,7 @@ dst_path="/home/joer/"
 for ((i=1; i<=5; i++)); do
     let "port=28880+i"
     echo $i
-    echo '123'| scp -P $port  /home/joer/vhost-blk-xrp/scripts/fio_test/guest_VM_install_kv.sh $vm:$dst_path
+    echo '123'| scp -P $port  /home/joer/vhost-blk-xrp/EXO/scripts/fio_test/guest_VM_install_kv.sh $vm:$dst_path
     echo '123'| sshpass -p $pswd ssh -tt -p $port $vm "sudo /home/joer/guest_VM_install_kv.sh" &
 done
 

@@ -1,6 +1,6 @@
 #!/bin/bash  
 # 定义环境变量和sh文件路径  
-devices=("nvme0" "nvme2")
+devices=("nvme0")
 num=1
 ns="n1"
 

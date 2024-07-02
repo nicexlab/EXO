@@ -6,8 +6,8 @@ port=2888
 port_L=28881
 dst_path="/home/joer/"
 outer_loops=4 
-LAPP_path="/home/joer/vhost-blk-xrp/scripts/time_l.fio"
-TAPP_path="/home/joer/vhost-blk-xrp/scripts/time_t.fio"
+LAPP_path="/home/joer/vhost-blk-xrp/EXO/scripts/time_l.fio"
+TAPP_path="/home/joer/vhost-blk-xrp/EXO/scripts/time_t.fio"
 for ((i=1; i<=5; i++)); do
     let "port=28880+i"
     echo $i
