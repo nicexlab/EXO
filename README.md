@@ -34,8 +34,7 @@ sudo update-grub
 Compile and install Qemu:
 ```
 cd qemu
- ../configure –enable-kvm –enable-vhost-blk –enable-bpf
-–extra-ldflags=”-lrt” –target-list=”x86 64-softmmu”
+../configure --enable-kvm --enable-vhost-blk --enable-user --enable-bpf --extra-ldflags="-lrt" --target-list="x86\_64-softmmu"
 mkdir build
 cd build
 sudo make install
