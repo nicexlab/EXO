@@ -1,5 +1,7 @@
 # EXO: Accelerating Storage Paravirtualization with eBPF
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13327789.svg)](https://doi.org/10.5281/zenodo.13327789)
+
 This repository contains source code and instructions to reproduce key results in the EXO paper (to appear in SC '24). A draft of the paper is added to this repository.
 
 EXO requires a low latency NVMe SSD on which the overhead of the Linux storage stack is significant. We use Intel Optane SSD P5800X in all the experiments. We provide SSH access to a host equipped with P5800X for artifact reviewers. Reviewers can find the credential on HotCRP. We assume that the operating system is Ubuntu 20.04, qemu is v7.1.50 and there are 20 physical CPU cores on the machine. Other configurations may require changing the scripts accordingly.
