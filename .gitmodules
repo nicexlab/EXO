@@ -5,9 +5,6 @@
 [submodule "spdk"]
 	path = spdk
 	url = https://github.com/spdk/spdk.git
-[submodule "linux"]
-	path = EXO-linux
-	url = https://github.com/qq502233945/EXO-linux.git
 [submodule "ebpf-app"]
 	path = ebpf-app
 	url = https://github.com/qq502233945/ebpf-app.git
